@@ -14,22 +14,20 @@ useEffect(() => {
 }, []);
 
 return (
-    <div>
+    <div className="movie-grid">
     {movies.map((movie) => (
-        <div key={movie.id}>
+    <Link className="movie" key={movie.id} to={`/movie/${movie.id}`}>
         <img
-            src={`https://image.tmdb.org/t/p/w342/${movie.backdrop_path}`}
+            src={`https://image.tmdb.org/t/p/w342/${movie.poster_path}`}
             alt={movie.original_title}
         />
         <div className="details">
             <h2>
-                <Link to={`/movie/${movie.id}`}>
                 {movie.original_title}
-                </Link>
             </h2>
             <p>{movie.release_date}</p>
         </div>
-        </div>
+        </Link>
     ))}
     </div>
 );

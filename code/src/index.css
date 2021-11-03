@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -11,3 +15,104 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+svg {
+  width:20px;
+  margin-right:5px;
+}
+
+
+.movie-grid {
+  display:flex;
+  flex-wrap: wrap;
+  width:100%;
+}
+
+.movie {
+  width:25%; 
+  position:relative; 
+  flex-grow:4;
+}
+
+.movie img {
+  width:100%;
+  height:100%;
+}
+
+.details {
+  position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,.75);
+    display: none;
+    padding: 20px;
+}
+
+.movie:hover .details {
+  display:flex;
+  flex-wrap:wrap;
+  flex-direction: column;
+  justify-content:flex-end;
+  background:rgba(0,0,0,.75);
+  color:white;
+}
+
+
+.details:hover {
+  background:rgba(0,0,0,.75);
+  color:white;
+}
+
+.background {
+  min-height:100vh;
+  background-size:cover;
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.movieDetails {
+  display:flex;
+  flex-direction: row;
+  align-items: flex-end;
+  position:relative;
+  padding:40px;
+  color:white;
+}
+
+.movieDetails img {
+  border: 5px solid white;
+  width:280px;
+}
+
+.text-details {
+  max-width:400px;
+  padding:20px;
+}
+
+.text-details h1 {
+  font-size:18px;
+}
+
+.text-details p {
+  font-size:14px;
+}
+
+.backButton {
+  position:absolute;
+  top:40px;
+  left:40px;
+  color:white;
+  text-decoration: none;
+  display:flex;
+}
+
+.averageScore {
+  color:red;
+  font-weight: 300;
+  font-size: 14px;
+  margin-left:10px;
+}
+
